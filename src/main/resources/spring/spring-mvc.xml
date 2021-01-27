@@ -6,20 +6,23 @@
        xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-        http://www.springframework.org/schema/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/spring-aop-4.2.xsd
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/spring-tx.xsd
-">
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+
 <!--组件扫描-->
     <context:component-scan base-package="com.khalil.ssm.blog" />
 <!--    开启注解配置-->
     <mvc:annotation-driven></mvc:annotation-driven>
+<!--   扫描视图容器 -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/WEB-INF/view/"/>
         <property name="suffix" value=".jsp" />

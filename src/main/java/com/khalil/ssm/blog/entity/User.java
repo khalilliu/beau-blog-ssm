@@ -9,7 +9,7 @@ import java.util.Date;
  * 用户
  */
 @Data
-public class User implements Serializable {
+public class User implements Serializable{
     private static final long serialVersionUID = -4415517704211731385L;
     private Integer userId;
 
@@ -21,6 +21,8 @@ public class User implements Serializable {
 
     private String userEmail;
 
+    private String userUrl;
+
     private String userAvatar;
 
     private String userLastLoginIp;
@@ -31,5 +33,9 @@ public class User implements Serializable {
 
     private Integer userStatus;
 
+    /**
+     * 文章数量（不是数据库字段）
+     */
     private Integer articleCount;
+
 }
